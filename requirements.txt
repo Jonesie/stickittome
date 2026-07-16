@@ -1,0 +1,2 @@
+# Runtime dependency. Tkinter ships with Python (see README for OS-specific notes).
+Pillow>=10.0.0

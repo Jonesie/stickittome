@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stickittome"
+version = "0.1.0"
+description = "Lightweight stick-figure drawing tool for ComfyUI ControlNet pose images"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "StickItToMe contributors" },
+]
+keywords = [
+  "comfyui",
+  "controlnet",
+  "openpose",
+  "stick-figure",
+  "pose",
+  "drawing",
+  "stable-diffusion",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: X11 Applications",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Multimedia :: Graphics",
+  "Topic :: Utilities",
+]
+dependencies = [
+  "Pillow>=10.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/YOURNAME/stickittome"
+Issues = "https://github.com/YOURNAME/stickittome/issues"
+
+[project.scripts]
+stickit = "stickitto.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+stickitto = ["py.typed", "icon.png", "icon.ico"]
+
+
+# ---------------------------------------------------------------------------
+# Notes
+# ---------------------------------------------------------------------------
+# Python package name: stickitto
+# Console script:       stickit
+# Repo / folder name:   stickittome
+# Brand:                StickItToMe
+# ---------------------------------------------------------------------------
