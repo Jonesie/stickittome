@@ -1049,8 +1049,11 @@ class StickfigureApp:
         # Snapshot before mutating so slider drags are undoable in one step.
         self._push_history()
         self.pose.style.line_width = float(self.line_width_var.get())
-        self.pose.style.head_radius_default = float(self.head_radius_var.get())
-        # heads created later use the new default radius; existing heads keep theirs.
+        new_radius = float(self.head_radius_var.get())
+        self.pose.style.head_radius_default = new_radius
+        # Update all existing heads immediately — same behaviour as line_width.
+        for head in self.pose.heads:
+            head.radius = new_radius
         self._redraw_all()
 
     def _sync_style_vars_from_pose(self) -> None:
