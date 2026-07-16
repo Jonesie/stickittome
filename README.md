@@ -9,6 +9,8 @@
 
 ---
 
+![StickItToMe screenshot](docs/screenshot.png)
+
 ## Why?
 
 When using ComfyUI with ControlNet (OpenPose, DWPose, etc.), you often need a
